@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shri Ram Mandir</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Utility Header -->
+    <header class="utility-header">
+        <div class="container flex-between">
+            <div class="tithi" data-en="Today's Tithi: Ekadashi" data-hi="आज की तिथि: एकादशी">
+                Today's Tithi: Ekadashi
+            </div>
+            <div class="lang-switch">
+                <button id="lang-toggle" class="btn-lang">
+                    <span class="en active">English</span>
+                    <span class="divider">/</span>
+                    <span class="hi">हिंदी</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Navigation -->
+    <nav class="main-nav" id="navbar">
+        <div class="container flex-between">
+            <h1 class="logo" data-en="Shri Ram Mandir" data-hi="श्री राम मंदिर">Shri Ram Mandir</h1>
+            <!-- Mobile Menu Toggle -->
+            <button class="mobile-menu-btn" id="mobile-menu-btn">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#home" data-en="Home" data-hi="मुख्य पृष्ठ">Home</a></li>
+                <li><a href="#history" data-en="History" data-hi="इतिहास">History</a></li>
+                <li><a href="#events" data-en="Events" data-hi="कार्यक्रम">Events</a></li>
+                <li><a href="#timing" data-en="Timing" data-hi="समय">Timing</a></li>
+                <li><a href="#gallery" data-en="Gallery" data-hi="चित्रशाला">Gallery</a></li>
+                <li><a href="#architect" data-en="Architect" data-hi="वास्तुकार">Architect</a></li>
+                <li><a href="#founder" data-en="Founder" data-hi="संस्थापक">Founder</a></li>
+                <li><a href="#donation" class="btn-primary btn-nav" data-en="Donation" data-hi="दान">Donation</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="hero-overlay"></div>
+            <div class="container hero-content">
+                <h2 class="slide-up" data-en="Welcome to Shri Ram Mandir" data-hi="श्री राम मंदिर में आपका स्वागत है">
+                    Welcome to Shri Ram Mandir
+                </h2>
+                <p class="slide-up delay-1" data-en="A Place of Divine Peace and Spiritual Journey" data-hi="दिव्य शांति और आध्यात्मिक यात्रा का स्थान">
+                    A Place of Divine Peace and Spiritual Journey
+                </p>
+                <a href="#donation" class="btn-primary btn-large slide-up delay-2" data-en="Support the Temple" data-hi="मंदिर का सहयोग करें">Support the Temple</a>
+            </div>
+        </section>
+
+        <!-- Dynamic Gallery Section -->
+        <section id="gallery" class="section">
+            <div class="container">
+                <h2 class="section-title text-center" data-en="Dynamic Gallery" data-hi="चित्रशाला">Dynamic Gallery</h2>
+                <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1549420084-21e1fe4d732c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Temple Exterior" loading="lazy">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1582510003544-4d00b7f74220?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Temple Deity" loading="lazy">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1548625361-ec85718df24b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Temple Architecture" loading="lazy">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1615561026021-ef7ab9666fcf?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Temple Offerings" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- History Section -->
+        <section id="history" class="section bg-light">
+            <div class="container">
+                <h2 class="section-title text-center" data-en="Our History" data-hi="हमारा इतिहास">Our History</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h3>1990</h3>
+                            <p data-en="Foundation Stone Laid" data-hi="शिलान्यास">Foundation Stone Laid</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h3>2005</h3>
+                            <p data-en="Main Structure Completed" data-hi="मुख्य संरचना पूरी हुई">Main Structure Completed</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h3>2020</h3>
+                            <p data-en="Grand Opening Ceremony" data-hi="भव्य उद्घाटन समारोह">Grand Opening Ceremony</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Events & Timing Section (Combined for layout elegance) -->
+        <section id="events" class="section">
+            <div class="container flex-grid">
+                <div class="col" id="timing">
+                    <h2 class="section-title" data-en="Darshan Timing" data-hi="दर्शन का समय">Darshan Timing</h2>
+                    <ul class="timing-list">
+                        <li>
+                            <span data-en="Morning Aarti" data-hi="मंगल आरती">Morning Aarti</span>
+                            <span>05:30 AM</span>
+                        </li>
+                        <li>
+                            <span data-en="Darshan" data-hi="दर्शन">Darshan</span>
+                            <span>06:00 AM - 12:00 PM</span>
+                        </li>
+                        <li>
+                            <span data-en="Evening Aarti" data-hi="संध्या आरती">Evening Aarti</span>
+                            <span>07:00 PM</span>
+                        </li>
+                        <li>
+                            <span data-en="Temple Closes" data-hi="मंदिर बंद">Temple Closes</span>
+                            <span>09:00 PM</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <h2 class="section-title" data-en="Upcoming Events" data-hi="आगामी कार्यक्रम">Upcoming Events</h2>
+                    <div class="event-card">
+                        <div class="event-date">
+                            <span class="day">15</span>
+                            <span class="month">NOV</span>
+                        </div>
+                        <div class="event-details">
+                            <h4 data-en="Maha Shivratri Celebration" data-hi="महा शिवरात्रि उत्सव">Maha Shivratri Celebration</h4>
+                            <p data-en="Join us for night-long prayers and bhajans." data-hi="रात भर की पूजा और भजन में हमारे साथ जुड़ें।">Join us for night-long prayers and bhajans.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Founder Section -->
+        <section id="founder" class="section bg-light">
+            <div class="container">
+                <h2 class="section-title text-center" data-en="Meet Our Founder" data-hi="हमारे संस्थापक से मिलें">Meet Our Founder</h2>
+                <div class="founder-card wrapper">
+                    <div class="founder-img">
+                        <img src="https://images.unsplash.com/photo-1542838334-a8e5229fc94e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Maharaj Ji" loading="lazy">
+                    </div>
+                    <div class="founder-content">
+                        <h3 data-en="Param Pujya Maharaj Ji" data-hi="परम पूज्य महाराज जी">Param Pujya Maharaj Ji</h3>
+                        <p data-en="Maharaj Ji has dedicated his life to the service of humanity and the preservation of Vedic culture. Under his guidance, the temple has grown into a spiritual oasis for thousands of devotees." data-hi="महाराज जी ने अपना जीवन मानवता की सेवा और वैदिक संस्कृति के संरक्षण के लिए समर्पित कर दिया है। उनके मार्गदर्शन में, यह मंदिर हजारों भक्तों के लिए एक आध्यात्मिक नखलिस्तान बन गया है।">
+                            Maharaj Ji has dedicated his life to the service of humanity and the preservation of Vedic culture. Under his guidance, the temple has grown into a spiritual oasis for thousands of devotees.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Architect Section -->
+        <section id="architect" class="section">
+            <div class="container text-center">
+                <h2 class="section-title" data-en="The Architect" data-hi="वास्तुकार">The Architect</h2>
+                <p class="max-w-m mx-auto mb-2" data-en="Designed beautifully fusing traditional Vedic Vastu Shastra with modern architectural engineering, ensuring longevity and divine aesthetics." data-hi="पारंपरिक वैदिक वास्तु शास्त्र को आधुनिक वास्तुशिल्प इंजीनियरिंग के साथ खूबसूरती से डिजाइन किया गया है, जो दीर्घायु और दिव्य सौंदर्यशास्त्र सुनिश्चित करता है।">
+                    Designed beautifully fusing traditional Vedic Vastu Shastra with modern architectural engineering, ensuring longevity and divine aesthetics.
+                </p>
+            </div>
+        </section>
+
+        <!-- Map & Donation Section -->
+        <section id="donation" class="section bg-dark">
+            <div class="container flex-grid">
+                <!-- Map -->
+                <div class="col map-col" id="map">
+                    <h2 class="section-title color-white" data-en="Find Us" data-hi="हमें खोजें">Find Us</h2>
+                    <div class="map-container">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3559.877283914115!2d80.9345!3d26.8466!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjbCsDUwJzQ3LjgiTiA4MMKwNTYnMDQuMiJF!5e0!3m2!1sen!2sin!4v1620000000000!5m2!1sen!2sin" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+                
+                <!-- Donation Card -->
+                <div class="col">
+                    <h2 class="section-title color-white" data-en="Donation" data-hi="दान">Donation</h2>
+                    <div class="donation-card">
+                        <h3 class="text-center" data-en="Support Our Cause" data-hi="हमारे उद्देश्य का समर्थन करें">Support Our Cause</h3>
+                        <p class="text-center text-muted" data-en="Scan the QR code to donate securely directly to our bank account via UPI." data-hi="UPI के माध्यम से सीधे हमारे बैंक खाते में सुरक्षित रूप से दान करने के लिए QR कोड स्कैन करें।">
+                            Scan the QR code to donate securely directly to our bank account via UPI.
+                        </p>
+                        
+                        <div class="qr-placeholder text-center">
+                            <!-- Placeholder QR Code using realistic API -->
+                            <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=upi://pay?pa=temple-name@bank" alt="UPI QR Code">
+                        </div>
+                        
+                        <div class="upi-details text-center">
+                            <p><strong>UPI ID:</strong> <span class="highlight">temple-name@bank</span></p>
+                            <p><strong>Phone:</strong> +91 98765 43210</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container text-center">
+            <h2 data-en="Shri Ram Mandir" data-hi="श्री राम मंदिर">Shri Ram Mandir</h2>
+            <p data-en="A tranquil place for devotion, prayers, and peace." data-hi="भक्ति, प्रार्थना और शांति के लिए एक शांत जगह।">A tranquil place for devotion, prayers, and peace.</p>
+            <div class="footer-links">
+                <a href="#home" data-en="Home" data-hi="मुख्य पृष्ठ">Home</a>
+                <a href="#history" data-en="History" data-hi="इतिहास">History</a>
+                <a href="#donation" data-en="Donation" data-hi="दान">Donation</a>
+            </div>
+            <p class="copyright">&copy; 2026 Shri Ram Mandir. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
