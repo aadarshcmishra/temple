@@ -2,7 +2,7 @@
 let currentLang = 'en'; // can be 'en' or 'hi'
 
 document.addEventListener('DOMContentLoaded', () => {
-    
+
     // 1. Language Toggle Logic
     const langToggleBtn = document.getElementById('lang-toggle');
     const spanEn = langToggleBtn.querySelector('.en');
@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
         currentLang = currentLang === 'en' ? 'hi' : 'en';
         updateLanguage();
     });
-    
+
     // Intialize on load
     updateLanguage();
 
@@ -71,4 +71,23 @@ document.addEventListener('DOMContentLoaded', () => {
             navbar.style.padding = '20px 0';
         }
     });
+    // 4. Spiritual Audio Player Logic
+    const audio = document.getElementById('temple-audio');
+    const playPauseBtn = document.getElementById('play-pause-btn');
+    let isPlaying = false;
+
+    if (audio && playPauseBtn) {
+        playPauseBtn.addEventListener('click', () => {
+            if (isPlaying) {
+                audio.pause();
+                playPauseBtn.innerHTML = '▶️'; // Switch to Play icon
+            } else {
+                // Ensure audio volume is pleasant, not blasting
+                audio.volume = 0.5;
+                audio.play().catch(e => console.log("Audio play failed:", e));
+                playPauseBtn.innerHTML = '⏸️'; // Switch to Pause icon
+            }
+            isPlaying = !isPlaying;
+        });
+    }
 });
